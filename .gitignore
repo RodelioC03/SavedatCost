@@ -1,0 +1,19 @@
+# Personal finance data — never publish local records or backups
+data/
+backups/
+release/SavedatCost/data/
+release/SavedatCost/backups/
+
+# Generated desktop/runtime output
+release/
+desktop/target/
+desktop/Cargo.lock
+
+# Local/editor/system files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
+

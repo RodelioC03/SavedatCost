@@ -1,0 +1,9 @@
+[package]
+name = "ledger-desktop"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+tao = "0.30"
+wry = "0.47"
+

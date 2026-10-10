@@ -1,0 +1,9 @@
+{
+  "name": "savedatcost-finance-workbench",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local-first personal finance workbench",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

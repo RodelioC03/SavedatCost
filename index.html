@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#191919" />
+  <title>SavedatCost — Finance Workbench</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <div class="brand"><div class="brand-mark" aria-label="Peso sign">₱</div><div><strong>SavedatCost</strong><span>Finance workbench</span></div></div>
+      <div class="workspace-label">Workspace</div>
+      <nav id="nav" class="nav-list"></nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sync-card"><span class="status-dot"></span><div><strong>Local-first</strong><small>Saved on this device</small></div><button id="syncBtn" class="icon-button" title="Sync status">↗</button></div>
+      <div class="sidebar-footer"><span id="backupLabel">Backup ready</span><button id="settingsBtn" class="text-button">Settings</button></div>
+    </aside>
+    <main class="main-shell">
+      <header class="topbar">
+        <div class="breadcrumbs"><span id="eyebrow">Overview</span><span class="crumb-sep">/</span><strong id="pageTitle">Your money, in focus</strong></div>
+        <div class="top-actions"><label class="search"><span>⌕</span><input id="searchInput" placeholder="Search transactions…" /></label><button id="calculatorBtn" class="ghost-button" title="Open calculator">⌗ Calculator</button><button id="saveBtn" class="ghost-button" title="Save data and create a backup" onclick="save()">↓ Save</button><button id="quickAdd" class="primary-button">＋ Quick add</button><button id="themeToggle" class="ghost-button" title="Toggle theme">☼</button></div>
+      </header>
+      <section class="content" id="app"></section>
+    </main>
+  </div>
+  <div id="modalRoot"></div>
+  <div class="app-watermark" aria-label="Made by Rodelio G. Cua">Made by Rodelio G. Cua</div>
+  <script src="app.js"></script>
+  <script src="account-providers.js"></script>
+  <script src="save-flow.js"></script>
+  <script src="__live.js"></script>
+</body>
+</html>
