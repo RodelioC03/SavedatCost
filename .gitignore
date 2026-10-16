@@ -4,6 +4,16 @@ backups/
 release/SavedatCost/data/
 release/SavedatCost/backups/
 
+# Temporary reviews and local exports
+tmp/
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+savedatcost-*.json
+ledger-backup*.json
+
 # Generated desktop/runtime output
 release/
 desktop/target/

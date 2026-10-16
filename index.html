@@ -6,11 +6,17 @@
   <meta name="theme-color" content="#191919" />
   <title>SavedatCost — Finance Workbench</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assistant.css" />
+  <link rel="stylesheet" href="assistant-command.css" />
+  <link rel="stylesheet" href="assistant-recovery.css" />
+  <link rel="stylesheet" href="account-scope.css" />
+  <link rel="stylesheet" href="savings-plan.css" />
+  <link rel="stylesheet" href="visual-polish.css" />
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar" aria-label="Primary navigation">
-      <div class="brand"><div class="brand-mark" aria-label="Peso sign">₱</div><div><strong>SavedatCost</strong><span>Finance workbench</span></div></div>
+      <div class="brand"><div class="brand-mark" role="img" aria-label="SavedatCost logo"><svg class="brand-logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="1.75" y="1.75" width="44.5" height="44.5" rx="14" fill="url(#brandTile)"/><circle cx="24" cy="24" r="14.5" fill="none" stroke="#d8f04a" stroke-width="2.1" opacity=".95"/><path d="M31.5 15.7v4.6m0-4.6h-4.6" fill="none" stroke="#87b76b" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><text x="23.7" y="31.3" text-anchor="middle" fill="#f5f0e7" font-size="20" font-weight="800" font-family="Inter,Segoe UI,sans-serif">₱</text><defs><linearGradient id="brandTile" x1="4" y1="44" x2="44" y2="4" gradientUnits="userSpaceOnUse"><stop stop-color="#10271d"/><stop offset="1" stop-color="#2e6545"/></linearGradient></defs></svg></div><div><strong>SavedatCost</strong><span>Finance workbench</span></div></div>
       <div class="workspace-label">Workspace</div>
       <nav id="nav" class="nav-list"></nav>
       <div class="sidebar-spacer"></div>
@@ -20,7 +26,7 @@
     <main class="main-shell">
       <header class="topbar">
         <div class="breadcrumbs"><span id="eyebrow">Overview</span><span class="crumb-sep">/</span><strong id="pageTitle">Your money, in focus</strong></div>
-        <div class="top-actions"><label class="search"><span>⌕</span><input id="searchInput" placeholder="Search transactions…" /></label><button id="calculatorBtn" class="ghost-button" title="Open calculator">⌗ Calculator</button><button id="saveBtn" class="ghost-button" title="Save data and create a backup" onclick="save()">↓ Save</button><button id="quickAdd" class="primary-button">＋ Quick add</button><button id="themeToggle" class="ghost-button" title="Toggle theme">☼</button></div>
+        <div class="top-actions"><label class="search"><span>⌕</span><input id="searchInput" placeholder="Search transactions…" /></label><button id="calculatorBtn" class="ghost-button" title="Open calculator">⌗ Calculator</button><button id="saveBtn" class="ghost-button" title="Save data and create a backup" onclick="save()">Save</button><button id="quickAdd" class="primary-button">＋ Add</button><button id="themeToggle" class="ghost-button" title="Toggle theme">☼</button></div>
       </header>
       <section class="content" id="app"></section>
     </main>
@@ -30,6 +36,12 @@
   <script src="app.js"></script>
   <script src="account-providers.js"></script>
   <script src="save-flow.js"></script>
+  <script src="savings-flow.js"></script>
+  <script src="transaction-flow.js"></script>
+  <script src="enhancements.js"></script>
+  <script src="assistant.js"></script>
+  <script src="account-scope.js"></script>
+  <script src="savings-plan.js"></script>
   <script src="__live.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@ const database = new DatabaseSync(path.join(dataDir,'savedatcost.sqlite'));
 database.exec('CREATE TABLE IF NOT EXISTS app_state (id INTEGER PRIMARY KEY CHECK (id = 1), saved_at TEXT NOT NULL, state_json TEXT NOT NULL)');
 const clients = new Set();
 const mime = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.md':'text/plain; charset=utf-8'};
-const watched = new Set(['index.html','app.js','styles.css']);
+const watched = new Set(['index.html','app.js','styles.css','visual-polish.css','assistant.js','assistant.css','assistant-command.css','assistant-recovery.css','account-scope.js','account-scope.css','savings-plan.js','savings-plan.css','enhancements.js','transaction-flow.js','savings-flow.js','account-providers.js','save-flow.js']);
 
 function sendReload(){for(const res of clients){res.write('data: reload\n\n')}}
 function safeFile(urlPath){const clean=decodeURIComponent(urlPath.split('?')[0]);const requested=clean==='/'?'/index.html':clean;const absolute=path.resolve(root,'.'+requested);return absolute.startsWith(root+path.sep)?absolute:null}
